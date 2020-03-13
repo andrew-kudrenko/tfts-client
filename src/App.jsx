@@ -22,7 +22,7 @@ export class App extends React.Component {
   }
 
   componentDidMount() {
-    const baseUrl = 'http://localhost:7000'
+    const baseUrl = 'https://tfts-admin-panel.herokuapp.com'
 
     fetch(`${baseUrl}/categories`)
       .then(response => response.json())
