@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Task = ({ title, condition, solution }) => (
   <div className="row">
-    <div className="col-sm-10 col-md-8 col-xl-6 mx-auto">
+    <div className="col-sm-10 col-xl-8 mx-auto">
       <h2 className="card-title text-center">{title}</h2>
       <hr />
       <div className="card mx-auto mb-3 shadow-sm">
