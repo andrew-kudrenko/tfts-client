@@ -10,7 +10,7 @@ export const Task = ({ title, condition, solution }) => (
           <h5 className="card-title text-center">Условие задачи</h5>
         </div>
         <div className="card-body">
-          <p className="card-text" style={{minHeight: '75px'}}>{condition}</p>
+          <p className="card-text pre-wrap">{condition}</p>
           <hr/>
           <div className="card- d-flex justify-content-center">
             <button className="btn btn-info"
@@ -32,7 +32,7 @@ export const Task = ({ title, condition, solution }) => (
             <h5 className="card-title text-center">Решение</h5>
           </div>
           <div className="card-body shadow-sm">
-            <p className="card-text">{solution}</p>
+            <p className="card-text pre-wrap">{solution}</p>
           </div>
         </div>
       </div>

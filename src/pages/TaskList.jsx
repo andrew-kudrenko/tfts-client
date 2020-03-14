@@ -7,7 +7,7 @@ export const TaskList = ({ tasksCount, category }) => {
   return (
     <>
       <h2 className="text-center">{title}</h2>
-      <p>{description}</p>
+      <p className="pre-wrap">{description}</p>
       <hr />
       <div className="row">
         {
