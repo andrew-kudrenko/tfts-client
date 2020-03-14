@@ -5,7 +5,7 @@ export const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
     <div className="container">
       <NavLink className="navbar-brand" to="/home">
-        Navbar
+        Home
     </NavLink>
       <button className="navbar-toggler"
         type="button"
@@ -21,9 +21,6 @@ export const Navbar = () => (
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
             <NavLink className="nav-link" to="/tasks/">Задачи</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/guides/">Методы решения</NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/about">О проекте</NavLink>

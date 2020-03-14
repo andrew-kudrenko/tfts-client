@@ -7,9 +7,7 @@ import { TaskCategories } from './pages/TaskCategories'
 import { TaskList } from './pages/TaskList'
 import { Task } from './pages/Task'
 import { About } from './pages/About'
-import { Guides } from './pages/Guides'
-
-const splitLocationPath = (separator = '/') => window.location.pathname.split(separator).filter(str => str.length)
+import { Home } from './pages/Home'
 
 export class App extends React.Component {
   constructor(props) {
@@ -40,39 +38,21 @@ export class App extends React.Component {
     return (
       <Layout>
         <Switch>
+          <Route path="/home"
+            exact
+            component={Home}
+          />
           <Route path="/tasks"
             exact
-            render={() => this.state.isFetching ? <h5>Loading...</h5> : <TaskCategories categories={this.state.categories} />}
+            render={() => <TaskCategories categories={this.state.categories} />}
           />
           <Route path="/tasks/:category"
             exact
-            render={() => {
-              const { tasks, categories } = this.state
-
-              if (tasks && categories) {
-                const [, category] = splitLocationPath()
-                const currentCategory = categories.find(item => item.alias === category)
-
-                return <TaskList tasksCount={tasks.filter(task => task.category === category).length} category={currentCategory} />
-              }
-
-              return null
-            }}
+            render={() => <TaskList {...this.props} tasks={this.state.tasks} categories={this.state.categories} />}
           />
           <Route path="/tasks/:category/:id"
             exact
-            render={() => {
-              if (this.state.tasks && this.state.categories) {
-                const [, category, id] = splitLocationPath()
-                return <Task {...this.state.tasks.filter(task => task.category === category)[id]} />
-              }
-
-              return null
-            }}
-          />
-          <Route path="/guides/"
-            exact
-            render={() => <Guides />}
+            render={() => <Task tasks={this.state.tasks}  />}
           />
           <Route path="/about"
             exact
