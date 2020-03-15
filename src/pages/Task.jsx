@@ -3,6 +3,13 @@ import { Loader } from '../components/Loader'
 import { withRouter } from 'react-router-dom'
 
 class TaskWithRouter extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { isOpenSolution: false }
+  }
+
+  handleClick = () => this.setState({ isOpenSolution: !this.state.isOpenSolution })
+
   render() {
     if (this.props.tasks) {
       const { category, id } = this.props.match.params
@@ -21,14 +28,16 @@ class TaskWithRouter extends React.Component {
                 <p className="card-text pre-wrap">{condition}</p>
                 <hr />
                 <div className="card- d-flex justify-content-center">
-                  <button className="btn btn-info"
+                  <button 
+                    className={`btn btn-${this.state.isOpenSolution ? 'danger' : 'info'}`}
                     type="button"
                     data-toggle="collapse"
                     data-target="#collapseSolution"
                     aria-expanded="false"
                     aria-controls="collapseSolution"
+                    onClick={this.handleClick}
                   >
-                    Показать решение
+                    {this.state.isOpenSolution ? 'Скрыть' : 'Показать'} решение
                 </button>
                 </div>
               </div>

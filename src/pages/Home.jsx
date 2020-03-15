@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom'
 
 export const Home = () => (
   <>
-    {/* <h2 className="text-center">Добро пожаловать!</h2>
-    <hr/> */}
     <div className="jumbotron home-jumbotron">
       <h1 className="display-4 mb-3">Добро пожаловать!</h1>
       <p className="lead">
