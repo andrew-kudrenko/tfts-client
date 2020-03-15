@@ -3,3 +3,9 @@
 .pre-wrap {
   white-space: pre-wrap;
 }
+
+.task-list {
+  .list-group-item {
+    a:hover { text-decoration: none; }
+  }
+}
