@@ -25,12 +25,12 @@ export class App extends React.Component {
     fetch(`${baseUrl}/categories`)
       .then(response => response.json())
       .then(categories => this.setState({ categories, isFetching: false }))
-      .then(() => {
+      .then(() => 
         fetch(`${baseUrl}/tasks`)
           .then(response => response.json())
           .then(tasks => this.setState({ tasks }))
           .catch(err => console.log(err))
-      })
+      )
       .catch(err => console.log(err))
   }
 

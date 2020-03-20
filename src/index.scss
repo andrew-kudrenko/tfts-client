@@ -1,11 +1,38 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Bellota|Pacifico&display=swap');
+
+body {
+  font-family: 'Bellota', cursive;
+}
 
 .pre-wrap {
   white-space: pre-wrap;
 }
 
-.task-list {
-  .list-group-item {
-    a:hover { text-decoration: none; }
+.app {
+  min-height: 100vh;
+
+  .navbar {
+    .navbar-title {
+      font: {
+        family: 'Pacifico', cursive;
+      }
+    }
+
+    .logo-image {
+      width: 35px;
+      height: 35px;
+      background: {
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      };
+    }
+  }
+
+  .task-list {
+    .list-group-item {
+      a:hover { text-decoration: none; }
+    }
   }
 }

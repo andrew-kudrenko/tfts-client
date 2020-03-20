@@ -2,8 +2,25 @@ import React from 'react'
 import { TaskListItem } from '../components/TaskListItem'
 import { Loader } from '../components/Loader'
 import { withRouter } from 'react-router-dom'
+import { setPageTitle } from '../utils/set-page-title'
 
 class TaskListWithRouter extends React.Component {
+  setPageTitle = () => {
+    if (this.props.categories) {
+      const { params } = this.props.match
+      const category = this.props.categories.find(c => c.alias === params.category)
+      setPageTitle(category.title)
+    }
+  }
+
+  componentDidMount() {
+    this.setPageTitle()
+  }
+
+  componentDidUpdate() {
+    this.setPageTitle()
+  }
+
   render() {
     const { categories, tasks } = this.props
 
@@ -18,6 +35,7 @@ class TaskListWithRouter extends React.Component {
       return (
         <>
           <h2 className="text-center">{title}</h2>
+          <hr />
           <p className="pre-wrap">{description}</p>
           <hr />
           <div className="row">
