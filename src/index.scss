@@ -9,6 +9,10 @@ body {
   white-space: pre-wrap;
 }
 
+.w-35 { width: 35%; }
+
+.w-60 { width: 60%; }
+
 .app {
   min-height: 100vh;
 
@@ -40,8 +44,8 @@ body {
       a:hover { text-decoration: none; }
     }
   }
+}
 
-  .task-category {
-    &-image { float: right; }
-  }
+@include media-breakpoint-up(md) {
+
 }
