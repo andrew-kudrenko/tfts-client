@@ -15,7 +15,7 @@ export const TaskCategoriesItem = ({ title, alias, preview, img }) => (
           />
           {preview}
         </p>
-        <img className="w-60 d-block mx-auto d-sm-none" 
+        <img className="w-75 w-xs-50 d-block mx-auto d-sm-none" 
             src={`/assets/categories/${img}`} 
             alt="Category item" 
           />
