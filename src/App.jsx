@@ -14,7 +14,7 @@ export const App = props => {
   const [categories, setCategories] = useState(null)
 
   useEffect(() => {
-    const baseUrl = 'https://tfts-admin-panel.herokuapp.com'
+    const baseUrl = 'https://tfts-backend.herokuapp.com/api'
 
     fetch(`${baseUrl}/categories`)
       .then(response => response.json())
