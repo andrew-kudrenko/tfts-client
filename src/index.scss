@@ -9,6 +9,10 @@ body {
   white-space: pre-wrap;
 }
 
+.scrolling-container {
+  overflow-x: scroll;
+}
+
 .table {
   tbody td { font-size: 1.5em; }
 }
