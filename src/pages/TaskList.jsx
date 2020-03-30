@@ -37,13 +37,13 @@ class TaskListWithRouter extends React.Component {
           <h2 className="text-center">{title}</h2>
           <hr />
           <p className="pre-wrap height-auto clearfix">
-            <img src={`/assets/categories/${category.img}`}
+            <img src={category.img}
               alt="Category img"
               className="d-none d-md-block w-md-35 w-lg-25 float-right"
             />
             {description}
           </p>
-          <img src={`/assets/categories/${category.img}`}
+          <img src={category.img}
               alt="Category img"
               className="d-block d-md-none w-60 w-xs-50 w-sm-40 w-lg-25 mx-auto"
             />
