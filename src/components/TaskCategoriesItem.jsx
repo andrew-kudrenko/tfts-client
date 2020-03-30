@@ -10,13 +10,13 @@ export const TaskCategoriesItem = ({ title, alias, preview, img }) => (
       <div className="card-body">
         <p className="card-text pre-wrap">
           <img className="w-35 d-none d-sm-block float-right" 
-            src={`/assets/categories/${img}`} 
+            src={img} 
             alt="Category item" 
           />
           {preview}
         </p>
         <img className="w-75 w-xs-50 d-block mx-auto d-sm-none" 
-            src={`/assets/categories/${img}`} 
+            src={img} 
             alt="Category item" 
           />
       </div>

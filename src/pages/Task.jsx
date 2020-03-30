@@ -46,7 +46,9 @@ class TaskWithRouter extends React.Component {
                 <h5 className="card-title text-center text-info">Условие</h5>
               </div>
               <div className="card-body">
-                <p className="card-text pre-wrap">{condition}</p>
+                <p className="card-text pre-wrap" 
+                  dangerouslySetInnerHTML={{__html: condition}} 
+                />
                 <hr />
                 <div className="card- d-flex justify-content-center">
                   <button
@@ -74,7 +76,9 @@ class TaskWithRouter extends React.Component {
                   <h5 className="card-title text-center text-info">Решение</h5>
                 </div>
                 <div className="card-body shadow-sm">
-                  <p className="card-text pre-wrap">{solution}</p>
+                  <p className="card-text pre-wrap" 
+                    dangerouslySetInnerHTML={{ __html: solution }}
+                  />
                 </div>
               </div>
             </div>
