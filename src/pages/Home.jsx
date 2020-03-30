@@ -6,12 +6,11 @@ import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
 
 export const Home = () => {
   setPageTitle('Задачи мудрецов')
-  const assetsOrigin = '/assets/home/'
 
   return (
     <>
       <h1 className="display-5 mb-3 text-center">Добро пожаловать!</h1>
-      <img src={`${assetsOrigin}greeting.png`}
+      <img src='https://disk.yandex.ru/client/disk/tfts?idApp=client&dialog=slider&idDialog=%2Fdisk%2Ftfts%2F8199d624-8949-4c02-9eb8-42f069ca7ab9.png'
         alt="Greeting sage"
         className="d-block w-50 mx-auto"
       />
@@ -34,12 +33,12 @@ export const Home = () => {
         что давненько не упражнял свои мозги. А зря. Такие задачки очень полезны,
         не только в плане развития логического мышления, а даже в плане снятия напряжения.
       </p>
-      <img src={`${assetsOrigin}benefit.png`}
+      <img src='https://disk.yandex.ru/client/disk/tfts?idApp=client&dialog=slider&idDialog=%2Fdisk%2Ftfts%2F20.png'
         alt="Польза задач"
         className="d-block d-md-none w-50 mx-auto my-3"
       />
       <p className="text-indent pb-3">
-        <img src={`${assetsOrigin}benefit.png`}
+        <img src='https://disk.yandex.ru/client/disk/tfts?idApp=client&dialog=slider&idDialog=%2Fdisk%2Ftfts%2F20.png'
           alt="Польза задач"
           className="d-none d-md-block w-35 w-lg-30 float-left"
         />
@@ -59,7 +58,7 @@ export const Home = () => {
       <h2 className="text-center">Какие задачи Вы найдёте здесь?</h2>
       <div className="pb-3">
         <p className="text-indent clearfix mb-0">
-          <img src={`${assetsOrigin}types.png`}
+          <img src='https://disk.yandex.ru/client/disk/tfts?idApp=client&dialog=slider&idDialog=%2Fdisk%2Ftfts%2F24.png'
             alt="Виды задач"
             className="d-none d-md-block w-30 w-lg-25 float-right"
           />
@@ -70,7 +69,7 @@ export const Home = () => {
           Задачи для мудрецов разнообразят досуг, и помогут с пользой провести время.
           Коллекция задач постоянно пополняется.
         </p>
-        <img src={`${assetsOrigin}types.png`}
+        <img src='https://disk.yandex.ru/client/disk/tfts?idApp=client&dialog=slider&idDialog=%2Fdisk%2Ftfts%2F24.png'
           alt="Виды задач"
           className="d-md-none d-block w-50 mx-auto my-3"
         />
