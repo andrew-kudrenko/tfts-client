@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faKey } from '@fortawesome/free-solid-svg-icons'
 import { setPageTitle } from '../utils/set-page-title'
+import { scrollToTop } from '../utils/scroll-to-top'
 
 class TaskWithRouter extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class TaskWithRouter extends React.Component {
 
   componentDidMount() {
     this.setPageTitle()
+    scrollToTop()
   }
 
   componentDidUpdate() {
@@ -46,7 +48,7 @@ class TaskWithRouter extends React.Component {
                 <h5 className="card-title text-center text-info">Условие</h5>
               </div>
               <div className="card-body">
-                <p className="card-text pre-wrap" 
+                <div className="card-text text-indent" 
                   dangerouslySetInnerHTML={{__html: condition}} 
                 />
                 <hr />
@@ -76,7 +78,7 @@ class TaskWithRouter extends React.Component {
                   <h5 className="card-title text-center text-info">Решение</h5>
                 </div>
                 <div className="card-body shadow-sm">
-                  <p className="card-text pre-wrap" 
+                  <div className="card-text text-indent" 
                     dangerouslySetInnerHTML={{ __html: solution }}
                   />
                 </div>

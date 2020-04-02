@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { setPageTitle } from '../utils/set-page-title'
+import { scrollToTop } from '../utils/scroll-to-top'
 
 export const About = () => {
-  setPageTitle('О проекте')
+  useEffect(() => {
+    setPageTitle('О проекте')
+    scrollToTop()
+  }, [])
 
   return (
     <>

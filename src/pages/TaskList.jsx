@@ -3,6 +3,7 @@ import { TaskListItem } from '../components/TaskListItem'
 import { Loader } from '../components/Loader'
 import { withRouter } from 'react-router-dom'
 import { setPageTitle } from '../utils/set-page-title'
+import { scrollToTop } from '../utils/scroll-to-top'
 
 class TaskListWithRouter extends React.Component {
   setPageTitle = () => {
@@ -15,6 +16,7 @@ class TaskListWithRouter extends React.Component {
 
   componentDidMount() {
     this.setPageTitle()
+    scrollToTop()
   }
 
   componentDidUpdate() {

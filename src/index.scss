@@ -9,17 +9,16 @@ body {
   white-space: pre-wrap;
 }
 
+.text-indent > p { text-indent: 1em; }
+
 .scrolling-container {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .table {
-  tbody td { font-size: 1.5em; }
+  tbody td { font-size: 1.35em; }
 }
   
-
-.text-indent { text-indent: 1em; }
-
 .w-20 { width: 20%; }
 
 .w-30 { width: 30%; }
@@ -56,6 +55,8 @@ body {
   .w-sm-40 { width: 40% !important; }
 
   .w-sm-50 { width: 50% !important; }
+
+  .w-sm-75 { width: 75% !important; }
 }
 
 @include media-breakpoint-up(md) {
@@ -68,6 +69,8 @@ body {
   .w-md-40 { width: 40% !important; }
 
   .w-md-50 { width: 50% !important; }
+
+  .w-md-75 { width: 75% !important; }
 }
 
 @include media-breakpoint-up(lg) {

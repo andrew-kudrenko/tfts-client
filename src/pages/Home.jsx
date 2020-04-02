@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { setPageTitle } from '../utils/set-page-title'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons'
+import { scrollToTop } from '../utils/scroll-to-top'
 
 export const Home = () => {
-  setPageTitle('Задачи мудрецов')
+  useEffect(() => {
+    setPageTitle('Задачи мудрецов')
+    scrollToTop()
+  }, [])
 
   return (
     <>
